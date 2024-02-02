@@ -1,0 +1,23 @@
+.inputForm {
+  display: flex;
+  flex-direction: row;
+}
+.currencyWrap {
+  position: relative;
+}
+
+.currencyCode {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.textCurrency {
+  padding: 10px 20px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large;
+}
