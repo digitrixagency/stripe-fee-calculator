@@ -2,6 +2,7 @@ import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import FormComponent from "./FormComponent"
 import FeeCalculation from "./FeeCalculation"
+import UsageGuide from "./UsageGuide"
 
 
 const content1 = ["Navigating through the intricacies of Stripe fees can be overwhelming, especially for businesses processing numerous transactions. To alleviate this burden, Tipalti presents a user-friendly solution – the Stripe Fee Calculator. Tailored for businesses of all sizes, this tool is designed to streamline the process of calculating Stripe transaction fees, saving your valuable time and resources.",
@@ -133,6 +134,7 @@ const Dashboard = () => {
                 </Typography>
             </Box>
             <FeeCalculation/>
+            <UsageGuide/>
         </Box>
 
     </Box>

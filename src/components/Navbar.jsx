@@ -1,35 +1,3 @@
-// import AppBar from "@mui/material/AppBar"
-// import Box from "@mui/material/Box"
-// import Toolbar from "@mui/material/Toolbar";
-// import Typography from "@mui/material/Typography"
-// import Button from "@mui/material/Button"
-
-// const navItems = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
-
-// const Navbar = () => {
-//   return <>
-//       <Box sx={{ flexGrow: 1 }}>
-//       <AppBar position="static" sx = {{bgcolor : "#433d3d"}}>
-//         <Toolbar>
-//           <Typography variant="h5" component="div" sx={{ flexGrow: 1, fontWeight : "bold", fontSize: "h4.fontSize", my: -4}}>
-//             LOGO
-//           </Typography>
-//           <Box>
-//             {navItems.map((item) => (
-//               <Button key={item} sx = {{color : "#fff"}}>
-//                 {item}
-//               </Button>
-//             ))}
-//           </Box>
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   </>
-// }
-
-// export default Navbar;
-
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -43,7 +11,24 @@ import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 
 const pages = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
-
+const pages2 = [
+  {
+    title: "Blog",
+    link: "",
+  },
+  {
+    title: "Privacy Policy",
+    link: "https://stripefeecalculator.net/page/privacy-policy/",
+  },
+  {
+    title: "Contact Us",
+    link: "https://stripefeecalculator.net/page/contact-us/",
+  },
+  {
+    title: "About Us",
+    link: "https://stripefeecalculator.net/page/about-us/"
+  }
+]
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
@@ -109,9 +94,9 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {pages2.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
