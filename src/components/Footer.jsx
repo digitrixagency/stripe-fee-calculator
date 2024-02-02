@@ -9,6 +9,7 @@ import pImg from "../assets/Pinterest.png";
 import tImg from "../assets/TwitterX.png";
 import IImg from "../assets/Instagram.png";
 import lImg from  "../assets/LinkedIn.png"
+import logoIcon from "../assets/Logo.png";
 
 const footerMenu1 = [
     {title: "Contact Us",
@@ -116,12 +117,15 @@ const Footer = () => {
             <Toolbar sx = {{
                 alignSelf: 'normal'
             }}>
-                <Typography variant = "h4" sx = {{
+                {/* <Typography variant = "h4" sx = {{
                     fontWeight: "bold",
                     flexGrow: 1,
                 }}>
                     LOGO
-                </Typography>
+                </Typography> */}
+                <Box sx={{flexGrow: 1}}>
+                    <img src={logoIcon} style={{width: '70px'}}/>
+                </Box>
                 <Typography>
                     {/* <Link sx = {{
                         textDecoration: 'none'

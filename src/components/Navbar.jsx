@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
+import logoIcon from "../assets/LOGO.png"
 
 const pages = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
 const pages2 = [
@@ -46,7 +47,7 @@ function Navbar() {
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+          {/* <Typography
             variant="h4"
             noWrap
             component="a"
@@ -63,8 +64,17 @@ function Navbar() {
             }}
           >
             LOGO
-          </Typography>
-
+          </Typography> */}
+          <Box sx={{
+            flexGrow: 1,
+            display: {xs: 'none', md: 'flex'},
+            mr: 2,
+          }}>
+            <img src={logoIcon} style={{
+            width: "70px",
+            
+          }}/>
+          </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -101,7 +111,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -118,7 +128,16 @@ function Navbar() {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
+          <Box sx={{
+            display: {xs: 'flex', md: 'none'},
+            flexGrow: 1,
+            mr: 2,
+          }}>
+            <img src={logoIcon} style={{
+              width: '70px'
+            }}/>
+          </Box>
           <Box sx={{display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
