@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import FormComponent from "./FormComponent"
+import FeeCalculation from "./FeeCalculation"
 
 
 const content1 = ["Navigating through the intricacies of Stripe fees can be overwhelming, especially for businesses processing numerous transactions. To alleviate this burden, Tipalti presents a user-friendly solution – the Stripe Fee Calculator. Tailored for businesses of all sizes, this tool is designed to streamline the process of calculating Stripe transaction fees, saving your valuable time and resources.",
@@ -97,7 +98,7 @@ const Dashboard = () => {
                 ))}
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h5">
+                <Typography variant="h6">
                 What is Strip 
                 </Typography>
                 <Typography variant="body1">
@@ -108,7 +109,7 @@ const Dashboard = () => {
                 </Typography>
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h5">
+                <Typography variant="h6">
                 What is the Stripe Fee Calculator
                 </Typography>
                 <Typography variant="body1">
@@ -116,7 +117,7 @@ const Dashboard = () => {
                 </Typography>
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h6">
+                <Typography variant="h6" fontWeight={400}>
                 Unveiling the Key Data for Accurate Stripe Fee Calculations
                 </Typography>
                 <Typography variant="body1">
@@ -131,6 +132,7 @@ const Dashboard = () => {
                 Armed with this insightful data, your business can effortlessly input information into the Stripe Fee Calculator, generating a comprehensive breakdown of fees, including a percentage of the processing fee and a fixed fee per transaction. Mastering these nuances empowers businesses to navigate the intricacies of Stripe fees with confidence.
                 </Typography>
             </Box>
+            <FeeCalculation/>
         </Box>
 
     </Box>

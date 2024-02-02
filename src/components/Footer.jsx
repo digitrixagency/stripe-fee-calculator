@@ -11,28 +11,76 @@ import IImg from "../assets/Instagram.png";
 import lImg from  "../assets/LinkedIn.png"
 
 const footerMenu1 = [
-    "Contact Us",
-    "About Us",
-    "Privacy Policy",
-    "Terms of Service",
-    "DMCA Policy",
-    "Authors",
-    "Work with Us",
-    "FAQ"
+    {title: "Contact Us",
+        link : "https://stripefeecalculator.net/page/contact-us/"},
+    {
+        title: "About Us",
+        link: "https://stripefeecalculator.net/page/about-us/"
+    },
+    {
+        title: "Privacy Policy",
+        link: "https://stripefeecalculator.net/page/privacy-policy/",
+    },
+    {
+        title: "Terms of Service",
+        link: "https://stripefeecalculator.net/page/terms-and-service/"
+    },
+    {
+        title: "DMCA Policy",
+        link: "https://stripefeecalculator.net/page/dmca/"
+    },
+    {
+        title: "Authors",
+        link: "",
+    },
+    {
+        title: "Work with Us",
+        link: "https://stripefeecalculator.net/page/work-with-us/",
+    },
+    {
+        title: "FAQ",
+        link: ""
+    }
 ]
 const footerMenu2 = [
-    "Advertise",
-    "Accessability",
-    "Guest Posting",
-    "Terms of Service",
-    "Site Map",
-    "Terms of Sale",
-    "Subscription"
+    {
+        title: "Advertise",
+        link: "https://stripefeecalculator.net/page/advertise/"
+    },
+    {
+        title: "Accessability",
+        link: "https://stripefeecalculator.net/page/accessibility/"
+    },
+    {
+        title: "Guest Posting",
+        link: "https://stripefeecalculator.net/page/guest-posting/"
+    },
+    {
+        title: "Terms of Sale",
+        link: "https://stripefeecalculator.net/page/terms-of-sale/"
+    },
+    {
+        title: "Site Map",
+        link: ""
+    },
+    {
+        title: "Subscription",
+        link: "https://stripefeecalculator.net/page/subscription/"
+    }
 ]
 const footerMenu3 = [
-    "Blog/Articles",
-    "Trust",
-    "Help"
+    {
+        title: "Blog/Articles",
+        link: ""
+    },
+    {
+        title: "Trust",
+        link: "https://stripefeecalculator.net/page/trust/"
+    },
+    {
+        title: "Help",
+        link: "https://stripefeecalculator.net/page/help/"
+    }
 ]
 
 const socialList = [
@@ -99,10 +147,12 @@ const Footer = () => {
                         alignItems: 'center',
                         margin: 2,
                     }}>
-                        {footerMenu1.map((item) => (
-                            <Typography key={item}>
-                                {item}
-                            </Typography>
+                        {footerMenu1.map(({title, link}) => (
+                            <Link key={title} href={link} sx = {{
+                                textDecoration: "none"
+                            }}>
+                                {title}
+                            </Link>
                         ))}
                     </Box>
                     <Box sx = {{
@@ -113,9 +163,11 @@ const Footer = () => {
                         margin: 2,
                     }}>
                         {footerMenu2.map((item) => (
-                            <Typography key={item}>
-                                {item}
-                            </Typography>
+                            <Link key={item.title} href={item.link} sx = {{
+                                textDecoration: "none"
+                            }}>
+                                {item.title}
+                            </Link>
                         ))}
                     </Box>
                     <Box
@@ -127,9 +179,11 @@ const Footer = () => {
                         margin: 2
                     }}>
                         {footerMenu3.map((item) => (
-                            <Typography key={item}>
-                                {item}
-                            </Typography>
+                           <Link key={item.title} href={item.link} sx = {{
+                            textDecoration: "none"
+                           }}>
+                            {item.title}
+                           </Link>
                         ))}
                     </Box>
                 </Box>
