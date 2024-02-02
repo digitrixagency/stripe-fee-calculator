@@ -70,6 +70,12 @@ const Dashboard = () => {
             alignItems: 'center',
             padding: 2,
             marginTop: 4,
+            height: '500px',
+            overflow: 'auto',
+            '&::-webkit-scrollbar': {
+                width: 0, // Hide the scrollbar in WebKit browsers
+              },
+          
         }}>
             <Typography component='h3' sx = {{
                 fontSize: 'h5.fontSize',
