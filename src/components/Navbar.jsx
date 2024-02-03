@@ -47,33 +47,31 @@ function Navbar() {
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href="#heading"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
           <Box sx={{
             flexGrow: 1,
             display: {xs: 'none', md: 'flex'},
             mr: 2,
           }}>
             <img src={logoIcon} style={{
-            width: "70px",
-            
-          }}/>
+              width: "70px",
+              
+            }}/>
+            <Typography
+              variant="h4"
+              noWrap
+              component="a"
+              href="#heading"
+              sx={{
+                ml: 2,
+                mt: 1.5,
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              Stripe Fee Calculator
+            </Typography>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

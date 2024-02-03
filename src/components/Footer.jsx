@@ -117,14 +117,16 @@ const Footer = () => {
             <Toolbar sx = {{
                 alignSelf: 'normal'
             }}>
-                {/* <Typography variant = "h4" sx = {{
-                    fontWeight: "bold",
-                    flexGrow: 1,
-                }}>
-                    LOGO
-                </Typography> */}
-                <Box sx={{flexGrow: 1}}>
+                <Box sx={{flexGrow: 1, display: 'flex', padding: 2}}>
                     <img src={logoIcon} style={{width: '70px'}}/>
+                    <Typography variant = "h4" sx = {{
+                            fontWeight: "bold",
+                            flexGrow: 1,
+                            marginTop: 2,
+                            marginLeft: 2,
+                    }}>
+                        Stripe Fee Calculator
+                    </Typography>
                 </Box>
                 <Typography>
                     {/* <Link sx = {{
