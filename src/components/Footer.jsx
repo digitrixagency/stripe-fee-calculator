@@ -117,7 +117,7 @@ const Footer = () => {
             <Toolbar sx = {{
                 alignSelf: 'normal'
             }}>
-                <Box sx={{flexGrow: 1, display: 'flex', padding: 2}}>
+                <Box sx={{flexGrow: 1, display: {xs : 'none', md : 'flex'}, padding: 2}}>
                     <img src={logoIcon} style={{width: '70px'}}/>
                     <Typography variant = "h4" sx = {{
                             fontWeight: "bold",
@@ -128,6 +128,11 @@ const Footer = () => {
                         Stripe Fee Calculator
                     </Typography>
                 </Box>
+                <Box sx = {{
+                    display : {md : 'none', xs : 'flex', flexGrow: 1}
+                }}>
+                   <img src={logoIcon} style={{width: '70px'}}/> 
+                </Box>
                 <Typography>
                     {/* <Link sx = {{
                         textDecoration: 'none'
@@ -136,7 +141,7 @@ const Footer = () => {
                 </Typography>
             </Toolbar>
             <Box sx = {{
-                width: '80%',
+                width: {md: '80%', xs : '100%'},
             }}>
                 <Box sx = {{
                     display: 'flex',
@@ -147,7 +152,7 @@ const Footer = () => {
                     margin: 2
                 }}>
                     <Box sx = {{
-                        display: 'flex',
+                        display: {xs : 'none', md : 'flex'},
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -162,7 +167,27 @@ const Footer = () => {
                         ))}
                     </Box>
                     <Box sx = {{
-                        display: 'flex',
+                        display : {md : 'none'},
+                        margin: 2,
+                    }}>
+                       {footerMenu1.map(({title, link}) => (
+                            <Box key={title} sx = {{
+                                border: 1,
+                                borderRadius: 1,
+                                padding: 1,
+                                margin: 0.5,
+                                display: 'inline-block'
+                            }}>
+                            <Link href={link} sx = {{
+                                textDecoration: "none",
+                            }}>
+                                {title}
+                            </Link>
+                            </Box>
+                        ))} 
+                    </Box>
+                    <Box sx = {{
+                        display: {md : 'flex', xs : 'none'},
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -176,9 +201,29 @@ const Footer = () => {
                             </Link>
                         ))}
                     </Box>
+                    <Box sx = {{
+                        display : {md : 'none'},
+                        margin: 1,
+                    }}>
+                       {footerMenu2.map(({title, link}) => (
+                            <Box key={title} sx = {{
+                                border: 1,
+                                borderRadius: 1,
+                                padding: 1,
+                                margin: 0.5,
+                                display: 'inline-block'
+                            }}>
+                            <Link href={link} sx = {{
+                                textDecoration: "none",
+                            }}>
+                                {title}
+                            </Link>
+                            </Box>
+                        ))} 
+                    </Box>
                     <Box
                     sx = {{
-                        display: 'flex',
+                        display: {md: 'flex', xs : 'none'},
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -191,6 +236,26 @@ const Footer = () => {
                             {item.title}
                            </Link>
                         ))}
+                    </Box>
+                    <Box sx = {{
+                        display : {md : 'none'},
+                        margin: 2,
+                    }}>
+                       {footerMenu3.map(({title, link}) => (
+                            <Box key={title} sx = {{
+                                border: 1,
+                                borderRadius: 1,
+                                padding: 1,
+                                margin: 0.5,
+                                display: 'inline-block'
+                            }}>
+                            <Link href={link} sx = {{
+                                textDecoration: "none",
+                            }}>
+                                {title}
+                            </Link>
+                            </Box>
+                        ))} 
                     </Box>
                 </Box>
             </Box>

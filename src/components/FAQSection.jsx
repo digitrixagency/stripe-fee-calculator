@@ -60,10 +60,10 @@ const faqList = [
 const FAQSection = () => {
  
     return (<Box sx = {{
-        width: '80%',
+        width: {md: '80%', xs:'100%'},
         padding: 2
     }}>
-        <Typography variant="h5" sx = {{
+        <Typography component="h2" variant="h5" sx = {{
             textAlign : 'center',
             fontWeight: 'bold',
             marginBottom: 2,

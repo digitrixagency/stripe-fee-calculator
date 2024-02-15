@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography"
 import FormControl from "@mui/material/FormControl"
 import styles from "./FormComponent.module.css";
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
 
 
 const FormComponent = () => {
@@ -67,26 +68,46 @@ const FormComponent = () => {
                 bgcolor : '#fff',
                 borderRadius: 4,
             }} onChange={handleAmountChange}/> */}
+            <Box sx = {{
+                display: {md: 'flex'},
+                flexDirection: 'row'
+            }}>
                 <div className={styles.currencyWrap}>
                 <span className={styles.currencyCode}>$</span>
-                <input className={styles.textCurrency} onChange={(e) => setAmount(e.target.value)} defaultValue={100}/>
+                <input className={styles.textCurrency} onChange={(e) => setAmount(e.target.value)} defaultValue={amount} value={amount}/>
                 </div>
+                <Button variant="contained" color="success" disableElevation={true} sx = {{
+                    marginLeft: {md: 1, xs : 0},
+                    marginTop: {xs: 1, md: 0}
+                }} onClick={() => setAmount(0)}>Reset</Button>
+            </Box>
         </FormControl>
         </form>
-        <Typography component='h5' sx = {{
+        <Typography component='h2' variant="h5" sx = {{
             marginTop: 2,
             fontWeight: 'bold',
-            fontSize : 'h5.fontSize'
         }}>
             Stripe Fee Calculator Result
         </Typography>
-        <Box sx = {{display : 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap:"wrap",marginTop: 2, width: '100%', textAlign: 'center'}}>
+        <Box sx = {{display : {md: 'flex', xs : 'none'}, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap:"wrap",marginTop: 2, width: '100%', textAlign: 'center'}}>
             {content.map(({heading1, heading2}) => (
                 <Box key={heading1}>
                     <Typography variant="h6">
                         {heading1}
                     </Typography>
-                    <Typography variant="h6" textAlign={"left"}>
+                    <Typography variant="h6" textAlign={"center"} color={"green"}>
+                        {heading2}
+                    </Typography>
+                </Box>
+            ))}
+        </Box>
+        <Box sx = {{display : {md: 'none', xs : 'flex'}, flexDirection: 'column', justifyContent: 'center', alignItems: 'center',marginTop: 2, width: '100%', textAlign: 'center'}}>
+            {content.map(({heading1, heading2}) => (
+                <Box key={heading1} margin={1}>
+                    <Typography variant="h6">
+                        {heading1}
+                    </Typography>
+                    <Typography variant="h6" textAlign={"center"} color={"green"}>
                         {heading2}
                     </Typography>
                 </Box>

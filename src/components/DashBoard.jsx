@@ -4,7 +4,6 @@ import FormComponent from "./FormComponent"
 import FeeCalculation from "./FeeCalculation"
 import UsageGuide from "./UsageGuide"
 
-
 const content1 = ["Navigating through the intricacies of Stripe fees can be overwhelming, especially for businesses processing numerous transactions. To alleviate this burden, Tipalti presents a user-friendly solution – the Stripe Fee Calculator. Tailored for businesses of all sizes, this tool is designed to streamline the process of calculating Stripe transaction fees, saving your valuable time and resources.",
 "Our Stripe Fee Calculator simplifies the otherwise complex landscape of payment processing fees. Whether you're a part of a finance team or a small business owner, this tool empowers you to accurately estimate the fees associated with your Stripe transactions. With a positive and efficient approach, Tipalti ensures that your business stays focused on growth while effortlessly managing payment-related costs.",
 "Say goodbye to confusion and hello to clarity as our calculator swiftly computes Stripe processing fees based on your inputs. Make informed financial decisions, optimize your payment strategies, and experience the ease of managing your transactions with Tipalti's Stripe Fee Calculator. Embrace a positive shift in your financial management – where simplicity meets savings."
@@ -32,8 +31,7 @@ const content2 = [{
 }]
 const Dashboard = () => {
     return <Box sx = {{
-        width : '100%',
-        background : 'linear-gradient(#4D62D3, #fff)'
+        background : 'linear-gradient(#4D62D3, #fff)',
     }}>
         <Box sx = {{
             display : 'flex',
@@ -42,8 +40,7 @@ const Dashboard = () => {
             alignItems: 'center',
             padding: 2
         }}>
-            <Typography variant="h4" sx = {{
-                fontSize: 'h4.fontSize',
+            <Typography variant="h4" component="h1" sx = {{
                 fontWeight: 'bold',
                 margin: 2,
                 textAlign: 'center'
@@ -79,8 +76,7 @@ const Dashboard = () => {
               },
           
         }}>
-            <Typography component='h3' sx = {{
-                fontSize: 'h5.fontSize',
+            <Typography component='h2' variant="h5" sx = {{
                 textAlign: 'center',
                 fontWeight: 'medium'
             }}>
@@ -99,8 +95,8 @@ const Dashboard = () => {
                 ))}
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h6">
-                What is Strip 
+                <Typography variant="h6" component="h2">
+                What is Stripe?
                 </Typography>
                 <Typography variant="body1">
                 Stripe stands as a prominent player in the realm of online payments, serving as a highly regarded payment gateway since its establishment in 2010. Renowned for its developer-friendly approach, Stripe empowers businesses to seamlessly accept online payments, emerging as a leading global payment service provider. Beyond its core function, Stripe extends its capabilities to subscription management and billing solutions, distinguishing itself with a strong emphasis on customization through a robust API for payouts.
@@ -110,15 +106,15 @@ const Dashboard = () => {
                 </Typography>
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h6">
-                What is the Stripe Fee Calculator
+                <Typography variant="h6" component="h2">
+                What is the Stripe Fee Calculator?
                 </Typography>
                 <Typography variant="body1">
                 A Stripe Fee Calculator is a convenient online tool that helps users determine the processing fees associated with receiving payments through the Stripe payment gateway, offering a quick and transparent way to understand transaction costs.
                 </Typography>
             </Box>
             <Box width={'80%'} marginY={2}>
-                <Typography variant="h6" fontWeight={400}>
+                <Typography variant="h6" fontWeight={400} component={'h3'}>
                 Unveiling the Key Data for Accurate Stripe Fee Calculations
                 </Typography>
                 <Typography variant="body1">

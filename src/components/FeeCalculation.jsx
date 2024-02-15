@@ -25,7 +25,7 @@ const content = [
 const FeeCalculation = () => {
     return <Box width="80%">
     <Box marginY={2} textAlign="center">
-    <Typography variant="h6">
+    <Typography variant="h5" component={'h2'} fontWeight={"medium"}>
         How Stripe Fee Calculation Works
     </Typography>
     <Typography varaint="body1">
@@ -33,15 +33,15 @@ const FeeCalculation = () => {
     </Typography>
     </Box>
     <Box marginY={2}>
-    <Typography variant="h6">
+    <Typography variant="h6" component={'h3'}>
         FORMULA
     </Typography>
-    <Typography variant="h7">
+    <Typography variant="body1">
         Fee=Fixed Fee+(Transaction Amount×Percentage Fee)
     </Typography>
     </Box>
     <Box marginY={2}>
-    <Typography variant="h6">
+    <Typography variant="h6" component={'h3'}>
     Given Values for Illustration:
     </Typography>
     <ul>
@@ -52,7 +52,7 @@ const FeeCalculation = () => {
     <Box marginY={2}>
         {content.map((item, index) => (
             <Box key={item.heading1} marginY={2}>
-                <Typography variant="h6">
+                <Typography variant="h7" component={'h4'} fontWeight={'bold'}>
                     {`${index+1}: ${item.heading1}: `}
                 </Typography>
                 <Typography variant="body1">

@@ -11,7 +11,7 @@ const Main = () => {
         alignItems: 'center',
         margin: 2
     }}>
-        <Typography variant="h4" sx = {{
+        <Typography variant="h4" component="h2" sx = {{
             fontWeight: 'bold',
             textAlign: 'center',
         }}>

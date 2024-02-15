@@ -35,7 +35,7 @@ const content = [
 const UsageGuide = () => {
     return <Box width="80%" marginY={2}>
         <Box textAlign="center">
-        <Typography variant="h5" >
+        <Typography variant="h5" component={'h2'} fontWeight={'medium'}>
         How to use Stripe Fee Calculator
         </Typography>
         <Typography variant="body1">
@@ -44,7 +44,7 @@ const UsageGuide = () => {
         </Box>
         {content.map((item, index) => (
             <Box key={item.title} marginY={2}>
-                <Typography variant="h6">
+                <Typography variant="h6" component={'h3'}>
                     {`Step ${index+1}: ${item.title}`}
                 </Typography>
                 <Typography variant="body1">
@@ -57,7 +57,7 @@ const UsageGuide = () => {
         Using a Stripe Fee Calculator simplifies the process of understanding the costs associated with using Stripe for payment processing, allowing businesses to make informed decisions regarding their financial transactions.
         </Typography>
         <Box>
-            <Typography variant="h6">
+            <Typography variant="h5" component={'h2'} fontWeight={'medium'}>
             How to Reduce Stripe Fees
             </Typography>
             <Typography variant="body1" marginY={1}>
