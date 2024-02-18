@@ -72,7 +72,7 @@ const footerMenu2 = [
 const footerMenu3 = [
     {
         title: "Blog/Articles",
-        link: ""
+        link: "https://stripefeecalculator.net/page/help/"
     },
     {
         title: "Trust",
@@ -118,7 +118,7 @@ const Footer = () => {
                 alignSelf: 'normal'
             }}>
                 <Box sx={{flexGrow: 1, display: {xs : 'none', md : 'flex'}, padding: 2}}>
-                    <img src={logoIcon} style={{width: '70px'}}/>
+                    <a href="/"><img src={logoIcon} style={{width: '70px'}}/></a>
                     <Typography variant = "h4" sx = {{
                             fontWeight: "bold",
                             flexGrow: 1,

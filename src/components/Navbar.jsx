@@ -11,11 +11,11 @@ import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import logoIcon from "../assets/LOGO.png"
 
-const pages = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
+// const pages = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
 const pages2 = [
   {
     title: "Blog",
-    link: "",
+    link: "https://stripefeecalculator.net/page/help/",
   },
   {
     title: "Privacy Policy",
@@ -52,15 +52,17 @@ function Navbar() {
             display: {xs: 'none', md: 'flex'},
             mr: 2,
           }}>
+            <a href="/">
             <img src={logoIcon} style={{
               width: "70px",
               
             }}/>
+            </a>
             <Typography
               variant="h4"
               noWrap
               component="a"
-              href="#heading"
+              href="/"
               sx={{
                 ml: 2,
                 mt: 1.5,
@@ -104,7 +106,13 @@ function Navbar() {
             >
               {pages2.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.title}</Typography>
+                  <Typography textAlign="center" component={'a'} href={page.link} sx={{
+                  textDecoration: 'none',
+                  color: 'black',
+                  '&:hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.1)' // Optional: Add underline on hover
+                },
+                }}>{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -132,11 +140,11 @@ function Navbar() {
             flexGrow: 1,
             mr: 2,
           }}>
-            <img src={logoIcon} style={{
+            <a href="/"><img src={logoIcon} style={{
               width: '70px'
-            }}/>
+            }}/></a>
           </Box>
-          <Box sx={{display: { xs: 'none', md: 'flex' } }}>
+          {/* <Box sx={{display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -146,7 +154,23 @@ function Navbar() {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
+          <Box sx={{display: { xs: 'none', md: 'flex' } }}>
+          {pages2.map((page) => (
+            <a
+              key={page.title}
+              href={page.link} // Specify the URL or path you want the button to link to
+              onClick={handleCloseNavMenu}
+              style={{ display: 'block', textDecoration: 'none', color: 'white', margin: '8px 0' }}
+            >
+              <Button sx = {{
+                color:"white",
+              }}>
+                {page.title}
+              </Button>
+            </a>
+          ))}
+        </Box>
 
           </Toolbar>
       </Container>

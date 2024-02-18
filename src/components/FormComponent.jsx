@@ -50,7 +50,29 @@ const FormComponent = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        // backgroundColor:'white'
     }}>
+        <Box sx = {{
+            display : 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 2
+        }}>
+            <Typography variant="h4" component="h1" sx = {{
+                fontWeight: 'bold',
+                margin: 2,
+                textAlign: 'center'
+            }}>
+                Stripe Fee Calculator
+            </Typography>
+            <Typography component = 'p' sx = {{
+                textAlign: 'center',
+                width: '80%',
+            }}>
+            Navigate the cost of your transactions effortlessly with our Stripe Fee Calculator, simplifying the calculation of processing fees for your payments.
+            </Typography>
+        </Box>
         <form className={styles.inputForm}>
         <FormControl component='div' sx = {{
             display: 'flex',
@@ -69,8 +91,10 @@ const FormComponent = () => {
                 borderRadius: 4,
             }} onChange={handleAmountChange}/> */}
             <Box sx = {{
-                display: {md: 'flex'},
-                flexDirection: 'row'
+                display: 'flex',
+                flexDirection: {md: 'row', xs: 'column'},
+                alignItems: {xs: 'center'},
+                justifyContent: 'center'
             }}>
                 <div className={styles.currencyWrap}>
                 <span className={styles.currencyCode}>$</span>
@@ -89,13 +113,13 @@ const FormComponent = () => {
         }}>
             Stripe Fee Calculator Result
         </Typography>
-        <Box sx = {{display : {md: 'flex', xs : 'none'}, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap:"wrap",marginTop: 2, width: '100%', textAlign: 'center'}}>
+        <Box sx = {{display : {md: 'flex', xs : 'none'}, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap:"wrap",marginTop: 4, width: '100%', textAlign: 'center'}}>
             {content.map(({heading1, heading2}) => (
                 <Box key={heading1}>
-                    <Typography variant="h6">
+                    <Typography variant="h5" component="p" fontWeight={'medium'} marginBottom={1}>
                         {heading1}
                     </Typography>
-                    <Typography variant="h6" textAlign={"center"} color={"green"}>
+                    <Typography variant="h5" textAlign={"center"} color={"green"} component={'p'} fontWeight={'bold'}>
                         {heading2}
                     </Typography>
                 </Box>
@@ -104,10 +128,10 @@ const FormComponent = () => {
         <Box sx = {{display : {md: 'none', xs : 'flex'}, flexDirection: 'column', justifyContent: 'center', alignItems: 'center',marginTop: 2, width: '100%', textAlign: 'center'}}>
             {content.map(({heading1, heading2}) => (
                 <Box key={heading1} margin={1}>
-                    <Typography variant="h6">
+                    <Typography variant="h5" component={'p'} fontWeight={'medium'}>
                         {heading1}
                     </Typography>
-                    <Typography variant="h6" textAlign={"center"} color={"green"}>
+                    <Typography variant="h5" textAlign={"center"} color={"green"} component={'p'} fontWeight={'bold'}>
                         {heading2}
                     </Typography>
                 </Box>

@@ -30,10 +30,12 @@ const content2 = [{
     desc: "Explore additional features offered by your local Stripe website, such as recurring billing, diverse payment methods, and premium support. Be aware that these features may come with additional fees."
 }]
 const Dashboard = () => {
-    return <Box sx = {{
+    return <>
+    <Box sx = {{
         background : 'linear-gradient(#4D62D3, #fff)',
     }}>
-        <Box sx = {{
+        <FormComponent/>
+        {/* <Box sx = {{
             display : 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -53,7 +55,7 @@ const Dashboard = () => {
             }}>
             Navigate the cost of your transactions effortlessly with our Stripe Fee Calculator, simplifying the calculation of processing fees for your payments.
             </Typography>
-        </Box>
+        </Box> */}
         {/* <Box sx = {{
             display: 'flex',
             flexDirection: 'column',
@@ -61,7 +63,7 @@ const Dashboard = () => {
             alignItems: 'center',
             padding: 2
         }}> */}
-        <FormComponent/>
+        {/* <FormComponent/> */}
         {/* </Box> */}
         <Box sx = {{
             display: "flex",
@@ -134,6 +136,7 @@ const Dashboard = () => {
         </Box>
 
     </Box>
+    </>
 }
 
 export default Dashboard;
