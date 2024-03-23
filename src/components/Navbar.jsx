@@ -14,11 +14,11 @@ import logoIcon from "../assets/LOGO.png"
 // const pages = ["Blog", "Privacy Policy", "Contact Us", "About Us"];
 const pages2 = [
   {
-    title: "Blog",
+    title: "Home",
     link: "https://stripefeecalculator.net/page/help/",
   },
   {
-    title: "Privacy Policy",
+    title: "Blog",
     link: "https://stripefeecalculator.net/page/privacy-policy/",
   },
   {
