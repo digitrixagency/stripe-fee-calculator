@@ -15,7 +15,7 @@ const Main = () => {
             fontWeight: 'bold',
             textAlign: 'center',
         }}>
-        Benefits of Strip Fee Calculator
+        Benefits of Stripe Fee Calculator
         </Typography>
         <Typography variant="body1" sx = {{
             padding: 2,

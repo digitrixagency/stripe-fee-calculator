@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 // eslint-disable-next-line react/prop-types
 export default function DropdownNavbar({title, subItems}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +24,7 @@ export default function DropdownNavbar({title, subItems}) {
     <>
       <Button
         onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon />}
+        endIcon={open ? <KeyboardArrowUpIcon/> : <KeyboardArrowDownIcon />}
         sx = {{
             color: 'white',
             fontSize: 16
