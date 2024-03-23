@@ -5,7 +5,6 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -18,34 +17,6 @@ const drawerWidth = 240;
 import { useState } from 'react';
 import Collapse from "@mui/material/Collapse";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
-const pages = [
-  {
-    title: "Blog",
-    link: "https://stripefeecalculator.net/page/help/",
-  },
-  {
-    title: "Privacy Policy",
-    link: "https://stripefeecalculator.net/page/privacy-policy/",
-  },
-  {
-    title: "Contact Us",
-    link: "https://stripefeecalculator.net/page/contact-us/",
-    subItems: [
-      {
-        title: "Help",
-        link: "https://stripefeecalculator.net/page/help/"
-      },
-      {
-        title: "Trust",
-        link: "https://stripefeecalculator.net/page/trust/"
-      }
-    ]
-  },
-  {
-    title: "About Us",
-    link: "https://stripefeecalculator.net/page/about-us/"
-  }
-]
 
 function ExpandableDrawerNavbar(props) {
     const [openMenus, setOpenMenus] = useState({});
@@ -133,6 +104,7 @@ function ExpandableDrawerNavbar(props) {
         ]
       }
     ];
+  // eslint-disable-next-line react/prop-types
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 

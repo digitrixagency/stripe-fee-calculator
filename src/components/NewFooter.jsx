@@ -9,27 +9,23 @@ import ListItemText from "@mui/material/ListItemText"
 const menuItems = [
     {
         title: "DMCA",
-        link: ""
+        link: "https://stripefeecalculator.net/page/dmca/"
     },
     {
         title: "Work With Us",
-        link: ""
+        link: "https://stripefeecalculator.net/page/work-with-us/"
     },
     {
         title: "Advertise",
-        link: ""
+        link: "https://stripefeecalculator.net/page/advertise/"
     },
     {
         title: "Guest Posting",
-        link: ""
-    },
-    {
-        title: "FAQ",
-        link: ""
+        link: "https://stripefeecalculator.net/page/guest-posting/"
     },
     {
         title: "Site Mapping",
-        link: ""
+        link: "https://stripefeecalculator.net/page/sitemap_index.xml"
     }
 ]
 const NewFooter = () => {
